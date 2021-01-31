@@ -1,0 +1,34 @@
+.home {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+
+
+    @media (min-width: $--mq-phone){
+        
+        flex-flow: row;
+    }
+
+
+    >.logo {
+        background: red;
+        >.wrapper {
+            >.image {}
+        }
+    }
+
+    >.content {
+        background: blue;
+        >.welcome {}
+
+        >.title {}
+
+        >.buttons-wrapper {
+            >.btn {
+                >.icon {}
+
+                >.text {}
+            }
+        }
+    }
+}

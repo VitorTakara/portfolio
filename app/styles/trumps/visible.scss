@@ -1,0 +1,17 @@
+@import '../settings/responsive.scss';
+
+._show-only-mobile{
+    display: inline-block;
+}
+
+@media (min-width: $--mq-phone){
+    ._show-only-mobile{
+        display: none;
+    }
+}
+
+@media (min-width: $--mq-tablet){
+    ._show-only-tablet{
+        display: none;
+    }
+}

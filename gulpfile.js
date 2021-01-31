@@ -50,10 +50,10 @@ gulp.task("views-js", function() {
 gulp.task("browser-sync", function() {
   browserSync.init({server: {baseDir: "dist",index:"index.html"}});
   gulp.watch("app/**/*").on("change", browserSync.reload);
-  gulp.watch("app/*.html",  gulp.series('html'));
-  gulp.watch("app/scss/**/*.scss", gulp.series('sass'));
-  gulp.watch("app/js/**/*.js", gulp.series('required-js'));
-  gulp.watch("app/img/**/*.*", gulp.series('img'));
+  gulp.watch("app/**/*.html",  gulp.series(['html', 'views-html']));
+  gulp.watch("app/styles/**/*.scss", gulp.series('sass'));
+  gulp.watch("app/**/*.js", gulp.series(['required-js', 'views-js']));
+  gulp.watch("app/assets/img/**/*.*", gulp.series('img'));
 });
 
 // HTML
@@ -78,7 +78,7 @@ gulp.task("favicon", function() {
 // SASS
 gulp.task("sass", function() {
   return gulp
-    .src(["app/scss/main.scss"])
+    .src(["app/styles/main.scss"])
     .pipe(sass({ outputStyle: "expanded" }).on("error", notify.onError()))
     .pipe(prefix(["last 15 versions", "> 1%", "ie 8", "ie 7"], { cascade: true }))
     .pipe(cssnano({ zindex: false }))
@@ -96,17 +96,6 @@ gulp.task("img", function() {
 // CLEAR dist
 gulp.task("clear", function(cb) {
   rimraf("./dist", cb);
-});
-
-// WATCH
-gulp.task("watch", function() {
-  gulp.watch("app/*.html", gulp.series('html'));
-  gulp.watch("app/scss/**/*.scss", gulp.series('sass'));
-  gulp.watch("app/js/**/*.js", gulp.series('required-js'));
-  gulp.watch("app/img/**/*.*", gulp.series('img'));
-  console.log(
-    "\n\n\nWatching Changes\n\n\n"
-  );
 });
 
 // BUILD
