@@ -47,7 +47,7 @@ const app = (function () {
         script.async = true
         script.src = view.script;
 
-        const el = document.getElementsByTagName('script')[0]
+        const el = document.getElementsByTagName('script')[0];
         el.parentNode.insertBefore(script, el)
 
         return new Promise(resolve => {

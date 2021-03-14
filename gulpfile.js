@@ -88,9 +88,9 @@ gulp.task("sass", function() {
 // IMAGES
 gulp.task("img", function() {
   return gulp
-    .src("app/img/**/*.*")
+    .src("app/assets/**/*.*")
     .pipe(imagemin())
-    .pipe(gulp.dest("dist/img"));
+    .pipe(gulp.dest("dist/assets"));
 });
 
 // CLEAR dist
