@@ -24,6 +24,9 @@ var gulp = require("gulp"),
   htmlmin = require('gulp-htmlmin'),
   rimraf = require("rimraf");
 
+  
+sass.compiler = require('node-sass');
+
 // JS
 gulp.task("required-js", function() {
   return gulp

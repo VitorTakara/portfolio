@@ -4,7 +4,7 @@
     display: inline-block;
 }
 
-@media (min-width: $--mq-phone){
+@media (min-width: $--mq-tablet){
     ._show-only-mobile{
         display: none;
     }
