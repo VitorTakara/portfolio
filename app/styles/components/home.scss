@@ -1,232 +1,30 @@
-.home {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 200px 1fr;
-    grid-gap: 5px;
-    background: url(../assets/img/bg.jpg) no-repeat center center fixed;
-    background-size: cover;
-
-
-    @media (min-width: $--mq-tablet) {
-        grid-template-columns: 300px 1fr;
-        grid-template-rows: 1fr;
-        grid-gap: 0px;
-    }
-
-
-    >.logo {
-        @media (min-width: $--mq-tablet) {
+.master-page {
+    &.-home {
+        >.content {
             display: flex;
-            align-items: center;
-            background: #f5f5f5;
-            box-shadow: 0 0 15px #0000002e;
-        }
-
-        >.wrapper {
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding-top: 30px;
-
-            @media (min-width: $--mq-tablet) {
-                max-height: 200px;
-            }
-
-            >.image {
-                height: 100%;
-                max-width: 100%;
-            }
-        }
-    }
-
-    >.content {
-        display: flex;
-        flex-flow: column;
-        justify-content: space-evenly;
-        align-items: center;
-
-        @media (min-width: $--mq-tablet) {
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 7vh 0;
-        }
-
-        >.welcome {
-            font-family: 'Playfair Display', serif;
-            font-size: calc(var(--font-size-base) + 30px);
-
-            @media (min-width: $--mq-tablet) {
-                padding-left: 50px;
-                font-size: calc(var(--font-size-base) + 40px);
-            }
-
-            
-            @media (min-width: $--mq-medium-desktop) {
-                font-size: calc(var(--font-size-base) + 60px);
-            }
-
-            @media (min-width: $--mq-large-desktop) {
-                font-size: calc(var(--font-size-base) + 80px);
-            }
-        }
-
-        >.title {
-            font-size: calc(var(--font-size-base) + 7px);
-            color: white;
-            width: 100%;
-            text-align: center;
-            padding: 25px 10px;
-            background: #000000b8;
-
-            @media (min-width: $--mq-tablet) {
-                font-size: calc(var(--font-size-base) + 5px);
-                width: auto;
-                text-align: left;
-                padding: 50px;
-            }
-
-            
-            @media (min-width: $--mq-medium-desktop) {
-                font-size: calc(var(--font-size-base) + 10px);
-            }
-
-
-
-            @media (min-width: $--mq-large-desktop) {
-                font-size: calc(var(--font-size-base) + 20px);
-            }
-        }
-
-        >.buttons-wrapper {
-            width: 100%;
-            display: flex;
+            flex-flow: column;
             justify-content: space-evenly;
+            align-items: center;
 
             @media (min-width: $--mq-tablet) {
+                align-items: flex-start;
                 justify-content: space-between;
-                padding: 0px 50px;
+                padding: 7vh 0;
             }
 
-            >.btn {
-                border: none;
-                background: none;
-                border-radius: 50%;
-                height: 90px;
-                width: 90px;
+            >.welcome-wrapper {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-flow: column;
-                box-shadow: 0px 6px 11px #0000001f;
 
-                @media (min-width: $--mq-tablet) {
-                    box-shadow: none;
-                    height: auto;
-                    width: auto;
-                    cursor: pointer;
-                    position: relative;
-
-                    &::before,
-                    &::after {
-                        content: "";
-                        bottom: 0;
-                        left: 0;
-                        width: calc(100% - 25px);
-                        height: 5px;
-                        background: #000;
-                        position: absolute;
-                        border-radius: 100px;
-                    }
-
-                    &::after {
-                        width: 15px;
-                        left: initial;
-                        right: 0;
-                    }
-
-                }
-
-                >.icon {
-                    height: 30px;
-                    margin-bottom: 5px;
-
-                    >img {
-                        height: 100%;
-                    }
+                >.welcome,
+                >span {
+                    font-family: 'Playfair Display', serif;
+                    font-size: calc(var(--font-size-base) + 30px);
 
                     @media (min-width: $--mq-tablet) {
-                        display: none;
-                    }
-                }
-
-                >.text {
-                    margin-top: 1px;
-                    font-size: calc(var(--font-size-base) - 5px);
-                    font-weight: 600;
-
-                    @media (min-width: $--mq-tablet) {
-                        font-family: 'Playfair Display', serif;
-                        font-weight: 400;
+                        padding-left: 50px;
                         font-size: calc(var(--font-size-base) + 40px);
-
-
-                        &.-work,
-                        &.-about-me {
-                            position: relative;
-                            z-index: 10;
-
-                            &::before,
-                            &::after {
-                                content: "work";
-                                position: absolute;
-                                left: 0;
-                                top: 0;
-                                opacity: 0;
-                                transition: .2s;
-                                z-index: -1;
-                            }
-
-                            &:hover {
-                                &::before {
-                                    opacity: 1;
-                                    left: 2px;
-                                    top: 2px;
-                                    color: #ff0000;
-                                }
-
-                                &::after {
-                                    opacity: 1;
-                                    left: -2px;
-                                    top: -2px;
-                                    color: #00ffff;
-                                }
-                            }
-                        }
-
-                        &.-about-me {
-                            width: calc(100% + 4px);
-
-                            &::before,
-                            &::after {
-                                content: "about me";
-                            }
-
-                            &:hover {
-                                &::after {
-                                    left: 1px;
-                                    top: -3px;
-                                }
-
-                                &::before {
-                                    left: 4px;
-                                    top: 2px;
-                                }
-                            }
-                        }
                     }
+
 
                     @media (min-width: $--mq-medium-desktop) {
                         font-size: calc(var(--font-size-base) + 60px);
@@ -234,6 +32,176 @@
 
                     @media (min-width: $--mq-large-desktop) {
                         font-size: calc(var(--font-size-base) + 80px);
+                    }
+                }
+
+                >span {
+                    padding-left: 0;
+                }
+            }
+
+            >.title {
+                font-size: calc(var(--font-size-base) + 7px);
+                color: white;
+                width: 100%;
+                text-align: center;
+                padding: 25px 10px;
+                background: #000000b8;
+
+                @media (min-width: $--mq-tablet) {
+                    font-size: calc(var(--font-size-base) + 5px);
+                    width: auto;
+                    text-align: left;
+                    padding: 50px;
+                }
+
+
+                @media (min-width: $--mq-medium-desktop) {
+                    font-size: calc(var(--font-size-base) + 10px);
+                }
+
+
+
+                @media (min-width: $--mq-large-desktop) {
+                    font-size: calc(var(--font-size-base) + 20px);
+                }
+            }
+
+            >.buttons-wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+
+                @media (min-width: $--mq-tablet) {
+                    justify-content: space-between;
+                    padding: 0px 50px;
+                }
+
+                >.btn {
+                    border: none;
+                    background: none;
+                    border-radius: 50%;
+                    height: 90px;
+                    width: 90px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-flow: column;
+                    box-shadow: 0px 6px 11px #0000001f;
+
+                    @media (min-width: $--mq-tablet) {
+                        box-shadow: none;
+                        height: auto;
+                        width: auto;
+                        cursor: pointer;
+                        position: relative;
+
+                        &::before,
+                        &::after {
+                            content: "";
+                            bottom: 0;
+                            left: 0;
+                            width: calc(100% - 25px);
+                            height: 5px;
+                            background: var(--color-primary);
+                            position: absolute;
+                            border-radius: 100px;
+                        }
+
+                        &::after {
+                            width: 15px;
+                            left: initial;
+                            right: 0;
+                        }
+
+                    }
+
+                    >.icon {
+                        height: 30px;
+                        margin-bottom: 5px;
+
+                        >img {
+                            height: 100%;
+                        }
+
+                        @media (min-width: $--mq-tablet) {
+                            display: none;
+                        }
+                    }
+
+                    >.text {
+                        margin-top: 1px;
+                        font-size: calc(var(--font-size-base) - 5px);
+                        font-weight: 600;
+
+                        @media (min-width: $--mq-tablet) {
+                            font-family: 'Playfair Display', serif;
+                            font-weight: 400;
+                            font-size: calc(var(--font-size-base) + 40px);
+
+
+                            &.-work,
+                            &.-about-me {
+                                position: relative;
+                                z-index: 10;
+
+                                &::before,
+                                &::after {
+                                    content: "work";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    opacity: 0;
+                                    transition: .2s;
+                                    z-index: -1;
+                                }
+
+                                &:hover {
+                                    &::before {
+                                        opacity: 1;
+                                        left: 2px;
+                                        top: 2px;
+                                        color: #ff0000;
+                                    }
+
+                                    &::after {
+                                        opacity: 1;
+                                        left: -2px;
+                                        top: -2px;
+                                        color: #00ffff;
+                                    }
+                                }
+                            }
+
+                            &.-about-me {
+                                width: calc(100% + 4px);
+
+                                &::before,
+                                &::after {
+                                    content: "about me";
+                                }
+
+                                &:hover {
+                                    &::after {
+                                        left: 1px;
+                                        top: -3px;
+                                    }
+
+                                    &::before {
+                                        left: 4px;
+                                        top: 2px;
+                                    }
+                                }
+                            }
+                        }
+
+                        @media (min-width: $--mq-medium-desktop) {
+                            font-size: calc(var(--font-size-base) + 60px);
+                        }
+
+                        @media (min-width: $--mq-large-desktop) {
+                            font-size: calc(var(--font-size-base) + 80px);
+                        }
                     }
                 }
             }

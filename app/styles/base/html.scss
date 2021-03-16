@@ -20,19 +20,21 @@ body,
 
 ::-webkit-scrollbar-track
 {
-	background-color: #F5F5F5;
+  background-color: #ffffff00;
 }
 
 ::-webkit-scrollbar
 {
   height: 5px;
-	width: 10px;
-	background-color: #F5F5F5;
+  width: 4px;
+  border-radius: 25px;
+  background-color: #ffffff00;
 }
 
 ::-webkit-scrollbar-thumb
 {
 	background-color: var(--color-primary);
+  border-radius: 25px;
 }
 
 ::-moz-selection { /* Code for Firefox */
