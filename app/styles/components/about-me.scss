@@ -5,7 +5,7 @@
     flex-flow: column;
 
 .bio-habilities {
-    font-size: calc(var(--font-size-base) + 2px);
+    font-size: calc(var(--font-size-base) + 5px);
     line-height: calc(var(--font-size-base) + 9px);
     padding-bottom: 15px;
 
@@ -15,7 +15,16 @@
         }
     }
 
-    >.habilities-wrapper {}
+    >.habilities-wrapper {
+        display: flex;
+        padding-top: 15px;
+        flex-flow: wrap;
+
+        >app-chart{
+            cursor: pointer;
+            margin: 3px;
+        }
+    }
 }
 
 .contact {

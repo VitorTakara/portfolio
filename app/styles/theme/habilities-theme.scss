@@ -1,0 +1,18 @@
+.animated-color{
+    *{
+    transition: color .3s;
+}
+}
+
+.theme-html { * { color: #f16529 } };
+.theme-css { * { color: #29a8e0 } };
+.theme-js { * { color: #f0db4f } };
+.theme-angular { * { color: #de032f } };
+.theme-vue { * { color: #41b883 } };
+.theme-ps { * { color: #235ab6 } };
+.theme-uiux {* { color:  black } };
+.theme-bootstrap { * { color: #6a429c } };
+.theme-webpack { * { color: #1c78c0 } };
+.theme-react { * { color: #00d8ff } };
+.theme-sass { * { color: #cc6699 } };
+.theme-gulp { * { color: #ec494a } };

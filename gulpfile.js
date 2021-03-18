@@ -30,7 +30,10 @@ sass.compiler = require('node-sass');
 // JS
 gulp.task("required-js", function() {
   return gulp
-    .src(["app/js/index.js"])
+    .src([
+      "app/js/components/chart.component.js",
+      "app/js/index.js"
+    ])
     .pipe(sourcemaps.init()) //ATIVAR SE QUISER SOURCEMAP
     .pipe(rigger())
     .pipe(concat("main.js"))
