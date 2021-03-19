@@ -12,11 +12,38 @@ body,
   color: var(--color-for-body);
 }
 
+a{
+  color: var(--color-for-body);
+  text-decoration: none;
+}
+
 body,
 #app {
   margin: 0; 
 }
 
+body{
+  position: relative;
+  
+  * {
+    //transition: color .3s;
+  }
+
+  &::after{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000000;
+    content: "";
+    z-index: 3;
+    pointer-events: none;
+    mix-blend-mode: soft-light;
+    transition: .3s;
+    opacity: 0;
+  }
+}
 
 ::-webkit-scrollbar-track
 {

@@ -73,7 +73,6 @@ const app = (function () {
     }
 
     function setTitle(title) {
-        console.log(title)
         document.title = title;
     }
 

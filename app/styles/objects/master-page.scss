@@ -21,32 +21,33 @@
         }
     }
 
-
-    >.header {
-
-
-        @media (min-width: $--mq-tablet) {
-            display: flex;
-            align-items: center;
-            background: #f6f6f6;
-            box-shadow: 0 0 15px #0000002e;
-        }
-
-        >.logo {
+    >app-header {
+        >.header {
             height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding-top: 30px;
 
             @media (min-width: $--mq-tablet) {
-                padding-top: 0;
-                max-height: 170px;
+                display: flex;
+                align-items: center;
+                background: #f6f6f6;
+                box-shadow: 0 0 15px #0000002e;
             }
 
-            >.image {
+            >.logo {
                 height: 100%;
-                max-width: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding-top: 30px;
+
+                @media (min-width: $--mq-tablet) {
+                    padding-top: 0;
+                    max-height: 200px;
+                }
+
+                >.image {
+                    height: 100%;
+                    max-width: 100%;
+                }
             }
         }
     }
@@ -63,84 +64,91 @@
             grid-gap: 0;
         }
 
-        >.header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            box-shadow: 0 0 15px #00000029;
-            position: relative;
-            background: #f6f6f6;
-
-
-            @media (min-width: $--mq-tablet) {
-                flex-flow: column;
-                justify-content: center;
-            }
-
-            &::after {
-                position: absolute;
-                bottom: -4px;
-                width: 100px;
-                left: calc(50% - 50px);
-                height: 3px;
-                background: var(--color-primary);
-                border-radius: 50px;
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-                content: "";
-
-                @media (min-width: $--mq-tablet) {
-                    left: initial;
-                    right: -3px;
-                    width: 4px;
-                    height: 100px;
-                    bottom: calc(50% - 50px);
-                    border-radius: 0px 10px 10px 0;
-                }
-            }
-
-            >.logo {
-                padding: 0;
-                width: auto;
-
-
-                @media (min-width: $--mq-tablet) {
-                    margin-bottom: 40px;
-                }
-            }
-
-            >.buttons-wrapper {
+        >app-header {
+            >.header {
+                height: 100%;
                 display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+                box-shadow: 0 0 15px #00000029;
+                position: relative;
+                background: #f6f6f6;
 
-                >.text {
-                    margin-left: 30px;
 
-                    &.--active {
-                        font-weight: 600;
-                    }
+                @media (min-width: $--mq-tablet) {
+                    flex-flow: column;
+                    justify-content: center;
+                }
 
+                &::after {
+                    position: absolute;
+                    bottom: -4px;
+                    width: 100px;
+                    left: calc(50% - 50px);
+                    height: 3px;
+                    background: var(--color-primary);
+                    border-radius: 50px;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                    content: "";
 
                     @media (min-width: $--mq-tablet) {
-                        cursor: pointer;
-                        padding: 20px;
-                        margin: 0;
-                        font-size: var(--font-size-base);
-
+                        left: initial;
+                        right: -3px;
+                        width: 4px;
+                        height: 100px;
+                        bottom: calc(50% - 50px);
+                        border-radius: 0px 10px 10px 0;
                     }
                 }
-            }
+
+                >.logo {
+                    padding: 0;
+                    width: 50px;
+
+                    @media (min-width: $--mq-tablet) {
+                        width: 180px;
+                        margin-bottom: 40px;
+                    }
+
+                    >.image {
+                        width: 100%;
+                    }
+                }
+
+                >.buttons-wrapper {
+                    display: flex;
+
+                    >.text {
+                        transition: color .5s;
+                        margin-left: 30px;
+
+                        &.--active {
+                            font-weight: 600;
+                        }
 
 
-            @media (min-width: $--mq-tablet) {
-                background: url(../assets/img/bg.jpg) no-repeat center center fixed;
-                background-size: cover;
+                        @media (min-width: $--mq-tablet) {
+                            cursor: pointer;
+                            padding: 20px;
+                            margin: 0;
+                            font-size: var(--font-size-base);
+
+                        }
+                    }
+                }
+
+
+                @media (min-width: $--mq-tablet) {
+                    background: url(../assets/img/bg.jpg) no-repeat center center fixed;
+                    background-size: cover;
+                }
             }
         }
 
 
         >.content {
-
             overflow: auto;
             height: calc(100% -10px);
             padding: 0px 5px 10px 10px;
@@ -149,7 +157,7 @@
 
             @media (min-width: $--mq-tablet) {
                 height: calc(100% - 20px);
-                padding: 10px 5px 10px 10px;
+                padding: 30px 50px 50px 50px;
                 margin: 10px 5px 10px 0;
             }
         }

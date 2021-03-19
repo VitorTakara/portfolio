@@ -52,6 +52,8 @@ class ChartComponent extends HTMLElement {
         });
 
         const myChart = document.querySelector(`.${id}`);
+        const bodyEl = document.querySelector('body');
+        let messageOrder = 0;
 
         myChart.addEventListener('click', () => {
             const messages = [
@@ -59,17 +61,30 @@ class ChartComponent extends HTMLElement {
                 `Can't wait for be part of your team! :)`,
                 `This SPA website was made 100% by me without any frameworks! Isn't awesome?!`,
                 `Since you entered in my website, ${Math.floor(Math.random() * 1000)} javascripts frameworks were made!`,
-            ]
+                `Ok, I think you already saw that nothing will happen clicking here...`,
+                `One last time: nothing will gonna happen...`,
+                `Congratiulations! You completed the quest! :D`,
+                `Sorry, I lied... There still nothing. I'll repeat all previous messages.`,
+                `Bye and thanks for beeing here playing (?) with my portfolio! Have a great day! :)`
+            ];
+
+            alert(messages[messageOrder]);
+
+            if(messageOrder >= messages.length){
+                messageOrder = 0;
+            } else {
+                messageOrder++;
+            }
         });
 
         myChart.addEventListener('mouseenter', () => {
-            document.querySelector('body').classList.add('animated-color');
-            document.querySelector('body').classList.add(`theme-${id}`);
+            bodyEl.classList.add('animated-color');
+            bodyEl.classList.add(`theme-${id}`);
         })
 
         myChart.addEventListener('mouseleave', () => {
-            document.querySelector('body').classList.remove('animated-color');
-            document.querySelector('body').classList.remove(`theme-${id}`);
+            bodyEl.classList.remove('animated-color');
+            bodyEl.classList.remove(`theme-${id}`);
         })
     }
 

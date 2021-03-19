@@ -32,6 +32,7 @@ gulp.task("required-js", function() {
   return gulp
     .src([
       "app/js/components/chart.component.js",
+      "app/js/components/header.component.js",
       "app/js/index.js"
     ])
     .pipe(sourcemaps.init()) //ATIVAR SE QUISER SOURCEMAP
