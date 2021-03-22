@@ -79,6 +79,12 @@
                 @media (min-width: $--mq-tablet) {
                     flex-flow: column;
                     justify-content: center;
+                    background: url(../assets/img/bg-menu.jpg) no-repeat;
+                    background-size: cover;
+
+                    &.--aboutme{
+                        background: url(../assets/img/bg-menu-aboutme.jpg) no-repeat;
+                    }
                 }
 
                 &::after {
@@ -139,11 +145,6 @@
                     }
                 }
 
-
-                @media (min-width: $--mq-tablet) {
-                    background: url(../assets/img/bg.jpg) no-repeat center center fixed;
-                    background-size: cover;
-                }
             }
         }
 

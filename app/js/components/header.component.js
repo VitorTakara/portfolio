@@ -18,7 +18,7 @@ class HeaderComponent extends HTMLElement {
         `;
 
         template.innerHTML = `
-        <header class="header">
+        <header class="header ${menuActive === 'aboutme' ? '--aboutme' : ''}"">
             <div class="logo">
                 <img class="image" src="assets/img/logo.png">
             </div>

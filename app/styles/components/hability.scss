@@ -18,6 +18,7 @@
 
     >canvas{
         z-index: 1;
+        border-radius: 50%;
         position: relative;
     }
 
@@ -27,7 +28,7 @@
         width: 50px;
         background: #f6f6f6;
         position: absolute;
-        top: 15px;
+        top: 16px;
         border-radius: 50%;
         left: 10px;
 
