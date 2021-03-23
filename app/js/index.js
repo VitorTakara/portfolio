@@ -10,14 +10,14 @@ const app = (function () {
         },
         {
             route: 'work',
-            title: 'work',
+            title: 'Work - Vitor Takara',
             templateUrl: 'views/work/work.html',
             script: 'views/work/work.js',
             init: () => initWork(),
             templateCache: null,
         },{
             route: 'aboutme',
-            title: 'about me',
+            title: 'About me - Vitor Takara',
             templateUrl: 'views/aboutme/aboutme.html',
             script: 'views/aboutme/aboutme.js',
             init: () => initAboutMe(),
@@ -48,7 +48,7 @@ const app = (function () {
         script.src = view.script;
 
         const el = document.getElementsByTagName('script')[0];
-        el.parentNode.insertBefore(script, el)
+        el.parentNode.insertBefore(script, el);
 
         return new Promise(resolve => {
             script.addEventListener('load', () => {
@@ -94,5 +94,4 @@ const app = (function () {
         views: views,
         setView: setView
     }
-
 }());

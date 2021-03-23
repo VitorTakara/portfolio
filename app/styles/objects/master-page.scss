@@ -82,8 +82,9 @@
                     background: url(../assets/img/bg-menu.jpg) no-repeat;
                     background-size: cover;
 
-                    &.--aboutme{
+                    &.--aboutme {
                         background: url(../assets/img/bg-menu-aboutme.jpg) no-repeat;
+                        background-size: cover;
                     }
                 }
 
@@ -111,7 +112,7 @@
 
                 >.logo {
                     padding: 0;
-                    width: 50px;
+                    width: 55px;
 
                     @media (min-width: $--mq-tablet) {
                         width: 180px;

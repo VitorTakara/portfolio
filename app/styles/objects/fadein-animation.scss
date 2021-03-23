@@ -17,12 +17,11 @@
     animation-duration: 1.5s;
     animation-fill-mode: both;
 
-    &.-delay-05s{
+    &.-delay-05s {
         animation-delay: .5s;
     }
 
-    &.-delay-1s{
+    &.-delay-1s {
         animation-delay: 1s;
     }
 }
-

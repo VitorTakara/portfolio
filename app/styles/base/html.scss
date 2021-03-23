@@ -1,4 +1,4 @@
-*{
+* {
   font-size: var(--font-size-base);
   font-family: var(--font-family-base);
   -webkit-tap-highlight-color: transparent;
@@ -8,28 +8,30 @@ html,
 body,
 #app {
   height: 100%;
+  width: 100%;
+  margin: 0;
   background: white;
   color: var(--color-for-body);
 }
 
-a{
+a {
   color: var(--color-for-body);
   text-decoration: none;
 }
 
 body,
 #app {
-  margin: 0; 
+  margin: 0;
 }
 
-body{
+body {
   position: relative;
-  
+
   * {
     //transition: color .3s;
   }
 
-  &::after{
+  &::after {
     position: fixed;
     left: 0;
     top: 0;
@@ -45,26 +47,24 @@ body{
   }
 }
 
-::-webkit-scrollbar-track
-{
+::-webkit-scrollbar-track {
   background-color: #ffffff00;
 }
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
   height: 5px;
   width: 6px;
   border-radius: 25px;
   background-color: #ffffff00;
 }
 
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
   background-color: #dadada;
   border-radius: 25px;
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+  /* Code for Firefox */
   color: white;
   background: var(--color-primary);
 }

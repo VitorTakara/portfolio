@@ -1,4 +1,75 @@
+.intro {
+    height: 100%;
+    width: 100vw;
+    z-index: 100;
+    position: fixed;
+    background: white;
+    animation: 2s outBgIntroHome;
+    opacity: 0;
+    pointer-events: none;
+
+    >.wrapper {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        background: url(../assets/img/bg.jpg) no-repeat center center fixed;
+        background-size: cover;
+        animation: 2s introHome;
+        opacity: 0;
+
+        >img {
+            max-width: 80vw;
+            max-height: 30vh;
+            margin-bottom: 20%;
+
+            @media (min-width: $--mq-tablet) {
+                max-width: 80vw;
+                max-height: 300px;
+                margin-bottom: 0;
+            }
+        }
+
+    }
+}
+
+@keyframes outBgIntroHome {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes introHome {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 .master-page {
+
     &.-home {
         >.content {
             display: flex;

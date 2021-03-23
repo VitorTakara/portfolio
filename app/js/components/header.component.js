@@ -12,19 +12,19 @@ class HeaderComponent extends HTMLElement {
 
         const menuTemplate =  `
             <div class="buttons-wrapper">
-                <a class="text ${menuActive === 'work' ? '--active' : ''}" onclick="setView(1)">Work</a>
-                <a class="text ${menuActive === 'aboutme' ? '--active' : ''}" onclick="setView(2)">About me</a>
+                <a class="text ${menuActive === 'work' ? '--active' : ''}" onclick="app.setView(app.views[1])">Work</a>
+                <a class="text ${menuActive === 'aboutme' ? '--active' : ''}" onclick="app.setView(app.views[2])">About me</a>
             </div>
         `;
 
         template.innerHTML = `
-        <header class="header ${menuActive === 'aboutme' ? '--aboutme' : ''}"">
-            <div class="logo">
-                <img class="image" src="assets/img/logo.png">
-            </div>
+            <header class="header ${menuActive === 'aboutme' ? '--aboutme' : ''}"">
+                <div class="logo" onclick="app.setView(app.views[0])">
+                    <img class="image" src="assets/img/logo.png">
+                </div>
 
-            ${menu === 'show' ? menuTemplate : ''}
-        </header>
+                ${menu === 'show' ? menuTemplate : ''}
+            </header>
         `;
 
         this.appendChild(template.content.cloneNode(true));

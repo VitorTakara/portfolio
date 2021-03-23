@@ -1,13 +1,13 @@
 function initHome(){
-    var options = {
+      let options = {
         strings: [
+            '',
             'Bem vindo_',
             'Bienvenue_',
             'Welcome_',
             'ようこそ_',
             'Benvenuto_',
             'Willkommen_',
-            'Добро пожаловать_',
             'Dobrodošli_',
             '환영합니다_',
             'Välkommen_',
@@ -23,9 +23,5 @@ function initHome(){
         loopCount: Infinity,
       };
       
-      var typed = new Typed('.welcome', options);
-}
-
-function setView(id){
-    app.setView(app.views[id])
+      let typed = new Typed('.welcome', options);
 }

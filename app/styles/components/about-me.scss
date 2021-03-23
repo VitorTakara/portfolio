@@ -1,11 +1,21 @@
 .master-page {
     &.-about-me {
         >.content {
+            @media (min-width: $--mq-tablet) {
+                padding: 30px 50px 30px;
+            }
+
             >.about-me {
                 height: 100%;
-                display: flex;
-                justify-content: space-between;
-                flex-flow: column;
+                display: grid;
+                grid-template-rows: 60px 1fr 1fr;
+                grid-gap: 10px;
+
+                @media (min-width: $--mq-tablet) {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-flow: column;
+                }
 
                 .bio-habilities {
                     font-size: calc(var(--font-size-base) + 2px);
@@ -46,6 +56,15 @@
                 }
 
                 .contact {
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: flex-end;
+                    padding-bottom: 7px;
+
+                    @media (min-width: $--mq-tablet) {
+                        padding-bottom: 0px;
+                    }
+
                     >.text {
                         transition: color .5s;
                         padding-bottom: 7px;
@@ -64,10 +83,15 @@
 
                         >a {
                             cursor: pointer;
-                            padding-right: 15px;
-                            margin-right: 5px;
+                            padding-right: 10px;
+                            margin-right: 2px;
                             position: relative;
                             transition: color .5s;
+
+                            @media (min-width: $--mq-tablet) {
+                                padding-right: 15px;
+                                margin-right: 5px;
+                            }
 
                             &::after {
                                 position: absolute;
