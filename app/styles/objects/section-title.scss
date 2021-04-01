@@ -11,39 +11,10 @@
         font-size: calc(var(--font-size-base) + 45px);
     }
 
-    >.title {
-        .blink {
-            opacity: 0;
-            animation: blink 1.3s infinite;
-        }
-    }
-
     >.icon{
         font-size: calc(var(--font-size-base) + 26px);
         display: flex;
         align-items: center;
         cursor: pointer;
-    }
-}
-
-@keyframes blink {
-    0% {
-        opacity: 0;
-    }
-
-    49% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    98% {
-        opacity: 1;
-    }
-
-    99% {
-        opacity: 0;
     }
 }
