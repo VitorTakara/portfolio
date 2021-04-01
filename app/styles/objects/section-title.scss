@@ -3,15 +3,26 @@
     font-size: calc(var(--font-size-base) + 25px);
     padding: 10px 0 20px;
     transition: color .5s;
+    display: flex;
+    justify-content: space-between;
 
 
     @media (min-width: $--mq-tablet) {
         font-size: calc(var(--font-size-base) + 45px);
     }
 
-    >.blink {
-        opacity: 0;
-        animation: blink 1.3s infinite;
+    >.title {
+        .blink {
+            opacity: 0;
+            animation: blink 1.3s infinite;
+        }
+    }
+
+    >.icon{
+        font-size: calc(var(--font-size-base) + 26px);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
     }
 }
 

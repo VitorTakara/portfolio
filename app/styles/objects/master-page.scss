@@ -8,6 +8,8 @@
     background: url(../assets/img/bg.jpg) no-repeat center center fixed;
     background-size: cover;
     overflow: hidden;
+    filter: blur(0px);
+    transition: filter .5s;
 
     @media (min-width: $--mq-tablet) {
         background: #f6f6f6;
@@ -19,6 +21,10 @@
             background: url(../assets/img/bg.jpg) no-repeat center center fixed;
             background-size: cover;
         }
+    }
+
+    &.-blur{
+        filter: blur(5px);
     }
 
     >app-header {

@@ -1,0 +1,33 @@
+.modal__container{
+    max-width: 1000px;
+
+    .description{
+        margin-bottom: 30px;
+
+        >b{
+            font-weight: 600;
+        }
+    }
+
+    .modal__title{
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: calc(var(--font-size-base) + 10px);
+        line-height: calc(var(--font-size-base) + 15px);
+        font-family: var(--font-family-base);
+        letter-spacing: 0;
+        color: var(--color-primary);
+        box-sizing: border-box;
+    }
+
+    .modal__footer{
+        display: flex;
+        justify-content: center;
+    }
+
+    .modal__close{
+        cursor: pointer;
+    }
+}
+

@@ -25,7 +25,9 @@ class ChartComponent extends HTMLElement {
 
         this.appendChild(template.content.cloneNode(true));
 
-        this.buildChart(chartName, color, value);
+        setTimeout(() => {
+            this.buildChart(chartName, color, value);
+        }, 700);
     }
 
     buildChart(id, color, value) {
