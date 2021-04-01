@@ -4,7 +4,7 @@
     <section class="content">
         <h1 class="section-title">
             <div class="title">Work<span class="blink">_</span></div>
-            <i class="icon">ⓘ</i>
+            <i class="icon" onclick="publicWorkApi.showModal(999)">ⓘ</i>
         </h1>
 
         <div class="scrollable fadeInUp">
@@ -17,15 +17,15 @@
                     <img class="image" src="assets/img/guiacovid.jpg">
                 </a>
 
-                <a class="item third" target="_blank" href="https://vitortakara.github.io/lite-js-pattern/dist/">
+                <a class="item third" onclick="publicWorkApi.showModal(2)">
                     <img class="image" src="assets/img/lite.jpg">
                 </a>
 
-                <a class="item fourth" target="_blank" href="https://github.com/VitorTakara/reduce-image">
+                <a class="item fourth" onclick="publicWorkApi.showModal(3)">
                     <img class="image" src="assets/img/reduceimage.jpg">
                 </a>
 
-                <a class="item fifth" target="_blank" href="https://vitortakara.github.io/portfolio_deprecated/dist">
+                <a class="item fifth" onclick="publicWorkApi.showModal(4)">
                     <img class="image" src="assets/img/portfolio2018.jpg">
                 </a>
             </div>
@@ -36,7 +36,7 @@
 
 <!-- micromodal Plugin -->
 
-<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="false">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div id="modal-1-content" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
 

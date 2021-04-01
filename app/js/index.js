@@ -1,6 +1,5 @@
 const app = (function () {
-    const views = [
-        {
+    const views = [{
             route: 'home',
             title: 'Home - Vitor Takara',
             templateUrl: 'views/home/home.html',
@@ -15,7 +14,7 @@ const app = (function () {
             script: 'views/work/work.js',
             init: () => initWork(),
             templateCache: null,
-        },{
+        }, {
             route: 'aboutme',
             title: 'About me - Vitor Takara',
             templateUrl: 'views/aboutme/aboutme.html',
