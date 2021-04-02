@@ -1,7 +1,6 @@
 const publicWorkApi = (() => {
   const htmlParser = new DOMParser();
   const masterPage = document.querySelector('.master-page');
-  const modalMain = document.querySelector('#modal-1-content');
   const modalViews = [{
     id: 0,
     title: 'Bank App',
@@ -34,7 +33,7 @@ const publicWorkApi = (() => {
     id: 4,
     title: 'Portfolio 2019',
     description: `At least once each three years I change my portfolio to practice my habilities and test my design and perfomance web skills. So I think my old portfolio must be here :). As same as this one, I've made this 2019 portfolio focusing on best perfomance, so I didn't use any frameworks. Pure javascript focusing totally in a clean code and performance. All this website including the design was made by me <b>( Technologies: HTML, SCSS, JS and Gulp for Production )</b>`,
-    link: 'https://github.com/VitorTakara/reduce-image',
+    link: 'https://vitortakara.github.io/portfolio_deprecated/dist',
     ghLink: 'https://github.com/VitorTakara/portfolio_deprecated',
     video: 'portfolio_2019.mp4'
   }, {
@@ -42,7 +41,7 @@ const publicWorkApi = (() => {
     title: 'About this portfolio :)',
     description: `At least once each two years I change my portfolio to practice my habilities and test my design and perfomance web skills. I invite you to see this code at GitHub, I challenged myself to make this <b>SPA from zero</b> and I've tried to do this based on <b>Angular behaviors, with Routes, a NgOnInit</b> equivalent for each page and a script that is load for each page based on the browser route. All this website including the design was made by me <b>( Technologies: HTML, SCSS, a lot of JS and Gulp for Production )</b>`,
     link: null,
-    ghLink: 'https://github.com/VitorTakara/portfolio_deprecated',
+    ghLink: 'https://github.com/VitorTakara/portfolio',
     video: 'portfolio_2021.mp4'
   }];
 
@@ -52,6 +51,7 @@ const publicWorkApi = (() => {
 
   function showModal(modalId) {
     const modalContent = modalViews.find(modal => modal.id === modalId);
+    const modalMain = document.querySelector('#modal-1-content');
     
     MicroModal.show('modal-1', {
       onShow: modal => {
@@ -77,7 +77,7 @@ const publicWorkApi = (() => {
               ${modalContent.ghLink !== null ? `<a class="button -outline" href="${modalContent.ghLink}" target="_blank">show me the code</a>` : ''}
             </footer>
           `;
-
+          
         masterPage.classList.add('-blur');
       },
       onClose: modal => masterPage.classList.remove('-blur')
